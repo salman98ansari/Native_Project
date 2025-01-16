@@ -1,24 +1,14 @@
-import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {StatusBar} from 'react-native';
+import AppNavigator from './src/navigation/AppNavigator';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Salman Ansari</Text>
-    </View>
+    <>
+      <StatusBar barStyle="light-content" backgroundColor="#44226E" />
+      <AppNavigator />
+    </>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    color: '#000',
-  },
-});
