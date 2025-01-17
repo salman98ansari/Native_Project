@@ -42,7 +42,8 @@ const DetailsScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <BankDetails />
+      {/* Bank Details Components */}
+      <BankDetails data={data} />
 
       <View style={styles.legendcontainer}>
         <Text style={styles.legendtext}>Payment History</Text>

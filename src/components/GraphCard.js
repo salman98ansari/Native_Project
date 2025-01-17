@@ -16,17 +16,8 @@ import {
 const {width} = Dimensions.get('window');
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const GraphCard = () => {
-  const lineGraphData = [
-    {x: 'Jan', y: 720, label: '750'},
-    {x: 'Feb', y: 750, label: '770'},
-    {x: 'Mar', y: 690, label: '690'},
-    {x: 'Apr', y: null},
-    {x: 'May', y: null},
-    {x: 'Jun', y: null},
-  ];
-
-  const lastNonNullIndex = lineGraphData.reduce(
+const GraphCard = ({lineGraphData}) => {
+  const lastNonNullIndex = lineGraphData?.reduce(
     (lastIndex, current, index) => (current.y !== null ? index : lastIndex),
     -1,
   );
@@ -93,7 +84,9 @@ const GraphCard = () => {
             size={20}
             color={'red'}
           />
-          <Text style={styles.icontext}>Next Update : 05 May 2023</Text>
+          <Text allowFontScaling={false} style={styles.icontext}>
+            Next Update : 05 May 2023
+          </Text>
         </View>
         <View>
           <Image
