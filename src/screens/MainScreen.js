@@ -14,7 +14,7 @@ import {
 
 const {width} = Dimensions.get('window');
 
-import {ScoreImapctingData, lineGraphData} from '../constants/MainScreenData'; //Import Data from File
+import {ScoreImapctingData, lineGraphData} from '../constants/MainScreenData'; //Import Data from Files
 import GraphCard from '../components/GraphCard';
 import ScoreDetailCard from '../components/ScoreDetailCard';
 
